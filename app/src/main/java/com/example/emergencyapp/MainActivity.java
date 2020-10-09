@@ -40,13 +40,29 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        ImageButton callButton = findViewById(R.id.imageButton4);
-        callButton.setOnClickListener(new View.OnClickListener() {
+        ImageButton callButton4 = findViewById(R.id.imageButton4);
+        ImageButton callButton3 = findViewById(R.id.imageButton3);
+        ImageButton callButton2 = findViewById(R.id.imageButton2);
+        callButton4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 makeCall();
             }
-            
+
+        });
+        callButton3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                make_Second_Call();
+            }
+
+        });
+        callButton2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                make_Third_Call();
+            }
+
         });
     }
     public void makeCall() {
@@ -58,6 +74,30 @@ public class MainActivity extends AppCompatActivity {
             ActivityCompat.requestPermissions(MainActivity.this, new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
         } else {
             String dial = "tel:5416569727";
+            startActivity( callIntent );
+        }
+    }
+    public void make_Second_Call() {
+        Intent callIntent = new Intent( Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:5038698557") );
+
+        if (ActivityCompat.checkSelfPermission( MainActivity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
+        } else {
+            String dial = "tel:5038698557";
+            startActivity( callIntent );
+        }
+    }
+    public void make_Third_Call() {
+        Intent callIntent = new Intent( Intent.ACTION_CALL);
+        callIntent.setData(Uri.parse("tel:5413719773") );
+
+        if (ActivityCompat.checkSelfPermission( MainActivity.this,
+                Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
+        } else {
+            String dial = "tel:5413719773";
             startActivity( callIntent );
         }
     }

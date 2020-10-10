@@ -15,7 +15,6 @@ import androidx.lifecycle.ViewModelProviders;
 import com.example.emergencyapp.R;
 
 public class DashboardFragment extends Fragment {
-
     private DashboardViewModel dashboardViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,

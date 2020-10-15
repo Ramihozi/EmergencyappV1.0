@@ -10,18 +10,19 @@
         android:id="@+id/text_home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="357dp"
+        android:layout_marginBottom="250dp"
         android:textAlignment="center"
         android:textSize="0sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="205dp"
-        android:layout_height="215dp"
+        android:layout_width="185dp"
+        android:layout_height="195dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/firebtn"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
@@ -30,9 +31,9 @@
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="205dp"
-        android:layout_height="215dp"
-        android:layout_marginBottom="116dp"
+        android:layout_width="185dp"
+        android:layout_height="195dp"
+        android:layout_marginBottom="152dp"
         android:background="@drawable/suicidepreventionbtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,8 +41,8 @@
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="205dp"
-        android:layout_height="215dp"
+        android:layout_width="185dp"
+        android:layout_height="195dp"
         android:layout_marginTop="32dp"
         android:background="@drawable/nine11call"
         app:layout_constraintBottom_toTopOf="@+id/text_home"

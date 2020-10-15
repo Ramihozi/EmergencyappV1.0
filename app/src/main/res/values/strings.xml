@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">Emergencyapp</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="app_name">Em3rgency!</string>
+    <string name="title_home">Dial</string>
+    <string name="title_dashboard">Location</string>
+    <string name="title_notifications">Send SMS</string>
+    <string name="title_map">Maps</string>
+    <string name="send_sms">Send SMS</string>
+    <string name="type_the_number">Type The Number</string>
+    <string name="type_your_message">Type Your Message..</string>
 </resources>

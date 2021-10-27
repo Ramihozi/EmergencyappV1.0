@@ -41,6 +41,16 @@ public class HomeFragment extends Fragment {
                 ImageButton callButton4 = getActivity().findViewById(R.id.imageButton3);
                 ImageButton callButton3 = getActivity().findViewById(R.id.imageButton);
                 ImageButton callButton2 = getActivity().findViewById(R.id.imageButton2);
+                ImageButton callButton5 = getActivity().findViewById(R.id.imageButton4);
+
+                callButton5.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        make_Fourth_Call();
+                    }
+
+                });
+
                 callButton4.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -65,37 +75,49 @@ public class HomeFragment extends Fragment {
             }
             public void makeCall() {
                 Intent callIntent = new Intent( Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:5417209173") );
+                callIntent.setData(Uri.parse("tel:911") );
 
                 if (ActivityCompat.checkSelfPermission( getContext(),
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
                 } else {
-                    String dial = "tel:5417209173";
+                    String dial = "tel:911";
                     startActivity( callIntent );
                 }
             }
             public void make_Second_Call() {
                 Intent callIntent = new Intent( Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:5416569727") );
+                callIntent.setData(Uri.parse("tel:541-567-8822") );
 
                 if (ActivityCompat.checkSelfPermission( getContext(),
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
                 } else {
-                    String dial = "tel:5416569727";
+                    String dial = "tel:541-567-8822";
                     startActivity( callIntent );
                 }
             }
             public void make_Third_Call() {
                 Intent callIntent = new Intent( Intent.ACTION_CALL);
-                callIntent.setData(Uri.parse("tel:5413141327") );
+                callIntent.setData(Uri.parse("tel:800-273-8255") );
 
                 if (ActivityCompat.checkSelfPermission( getContext(),
                         Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                     ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
                 } else {
-                    String dial = "tel:5413141327";
+                    String dial = "tel:800-273-8255";
+                    startActivity( callIntent );
+                }
+            }
+            public void make_Fourth_Call() {
+                Intent callIntent = new Intent( Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:800-222-1222") );
+
+                if (ActivityCompat.checkSelfPermission( getContext(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
+                } else {
+                    String dial = "tel:800-222-1222";
                     startActivity( callIntent );
                 }
             }

@@ -2,6 +2,8 @@ package com.example.emergencyapp.ui.dashboard;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -25,6 +28,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.emergencyapp.MainActivity;
 import com.example.emergencyapp.R;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
@@ -60,6 +64,7 @@ public class DashboardFragment extends Fragment {
         //Initialize FusedLocationProviderClient
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(getActivity());
 
+
         btLocation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,6 +73,14 @@ public class DashboardFragment extends Fragment {
                 ,Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED){
                     //When permission granted
                     getLocation();
+                    String text = textView5.getText().toString();
+
+                    ClipboardManager clipboardManager = (ClipboardManager) getActivity().getSystemService(Context.CLIPBOARD_SERVICE);
+                    ClipData clip = ClipData.newPlainText("String",text);
+                    clipboardManager.setPrimaryClip(clip);
+                    clip.getDescription();
+
+                    Toast.makeText(getActivity(),"Copied", Toast.LENGTH_SHORT).show();
                 }else {
                     //When permission denied
                     ActivityCompat.requestPermissions(getActivity(),
@@ -147,6 +160,7 @@ public class DashboardFragment extends Fragment {
                     }
                 }
             });
+
         }else  {
             //When location service is not enabled
             //open location setting

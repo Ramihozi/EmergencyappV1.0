@@ -42,6 +42,15 @@ public class HomeFragment extends Fragment {
                 ImageButton callButton3 = getActivity().findViewById(R.id.imageButton);
                 ImageButton callButton2 = getActivity().findViewById(R.id.imageButton2);
                 ImageButton callButton5 = getActivity().findViewById(R.id.imageButton4);
+                ImageButton callButton6 = getActivity().findViewById(R.id.imageButton5);
+
+                callButton6.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        make_Fifth_Call();
+                    }
+
+                });
 
                 callButton5.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -118,6 +127,20 @@ public class HomeFragment extends Fragment {
                     ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
                 } else {
                     String dial = "tel:800-222-1222";
+                    startActivity( callIntent );
+                }
+            }
+
+
+            public void make_Fifth_Call() {
+                Intent callIntent = new Intent( Intent.ACTION_CALL);
+                callIntent.setData(Uri.parse("tel:844-698-2411") );
+
+                if (ActivityCompat.checkSelfPermission( getContext(),
+                        Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                    ActivityCompat.requestPermissions(getActivity(), new String[]{(Manifest.permission.CALL_PHONE)}, REQUEST_CALL);
+                } else {
+                    String dial = "tel:844-698-2411";
                     startActivity( callIntent );
                 }
             }

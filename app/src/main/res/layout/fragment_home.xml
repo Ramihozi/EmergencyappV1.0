@@ -10,60 +10,73 @@
         android:id="@+id/text_home"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
         android:textAlignment="center"
         android:textSize="0sp"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton" />
 
     <ImageButton
         android:id="@+id/imageButton"
-        android:layout_width="191dp"
-        android:layout_height="208dp"
-        android:layout_marginTop="117dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="84dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="15dp"
         android:background="@drawable/firebtn"
         app:layout_constraintBottom_toTopOf="@+id/text_home"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
     <ImageButton
         android:id="@+id/imageButton2"
-        android:layout_width="199dp"
-        android:layout_height="195dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/suicidepreventionbtn"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton4"
+        android:layout_width="251dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="124dp"
+        android:background="@drawable/kys"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton4"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/text_home" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/imageButton3"
-        android:layout_width="204dp"
-        android:layout_height="219dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="21dp"
-        android:background="@drawable/nine11call"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="101dp"
+        android:background="@drawable/nine11btn"
+        app:layout_constraintBottom_toTopOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="@+id/imageButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton" />
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageButton
         android:id="@+id/imageButton4"
-        android:layout_width="178dp"
-        android:layout_height="187dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="139dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="240dp"
         android:background="@drawable/poisonctrlbtn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton2"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/imageButton5"
+        android:layout_width="190dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="52dp"
+        android:background="@drawable/veteran"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_home"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
